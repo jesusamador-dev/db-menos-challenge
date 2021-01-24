@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './assets/css/styles.css';
+import App from './routes/App';
 import reportWebVitals from './reportWebVitals';
+import SplashScreen from './components/SplashScreen';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <SplashScreen />
   </React.StrictMode>,
   document.getElementById('root')
 );
