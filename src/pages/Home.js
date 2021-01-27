@@ -20,7 +20,7 @@ const Home=() => {
         <aside className={`sidebar ${isOpen? 'sidebar-open':""}`}>
           <button className="btn btn-close" onClick={() => { setOpen(!isOpen) }}> <i className="icon-close"></i></button>
           <section className="search">
-            <SearchForm />
+            <SearchForm setOpen={setOpen} />
           </section>
         </aside>
         <List />

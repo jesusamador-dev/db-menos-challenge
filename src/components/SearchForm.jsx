@@ -5,7 +5,7 @@ import useFilters from '../hooks/useFilters';
 import useItems from '../hooks/useItems';
 import ItemsContext from '../context/ItemsContext';
 
-const SearchForm=() => {
+const SearchForm=({ setOpen }) => {
   const methods = useForm();
   const { setItems, setLoading }=useContext(ItemsContext);
   const [check, setCheck]=useState("");
@@ -41,6 +41,7 @@ const SearchForm=() => {
     setItems({});
     setLoading(true)
     setForm(data);
+    setOpen(false);
   }
 
   return (
