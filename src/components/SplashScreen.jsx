@@ -3,16 +3,21 @@ import React, { useEffect, useState } from 'react';
 const SplashScreen = () => {
   const [isReady, setReady]=useState(false);
   useEffect(() => {
-    setReady(true);
+    window.addEventListener('load', () => {
+      setReady(true);
+    })
   }, []);
   return (
-    <div className={ `splash-container ${isReady ? 'is-ready' : ''} ` }>
-          <div className="splash-top">
-            <h4 className="splash-title-top">Dbmenos</h4>
-          </div>
-          <div className="splash-bottom">
-            <h4 className="splash-title-bottom">Challenge</h4>
-          </div>
+    <div className={`splash-container ${isReady? 'is-ready':''} `}>
+      <div>
+            <h4 className="splash-title">Dbmenos</h4>
+            <h4 className="splash-subtitle">Challenge</h4>
+      </div>
+
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
     </div>
   )
 };
